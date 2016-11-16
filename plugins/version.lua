@@ -8,10 +8,10 @@ end
 end
 return {
   patterns = {
-    "^[#!/]([Ee]xtreme)$,
-    "^[#!/]([Ee]xtremebot)$,
+    "^[#!/]([Ee]xtreme)$",
+    "^[#!/]([Ee]xtremebot)$",
     "^([Ee]xtreme)$",
-    "^([Ee]xtremebot)$,
+    "^([Ee]xtremebot)$",
     },
   run = run
 }
