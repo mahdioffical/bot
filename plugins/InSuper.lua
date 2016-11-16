@@ -1008,10 +1008,10 @@ function get_message_callback(extra, success, result)
 		print(chat_id)
 		if is_muted_user(chat_id, user_id) then
 			unmute_user(chat_id, user_id)
-			send_large_msg(receiver, "["..user_id.."] removed from the muted user list")
+			send_large_msg(receiver, ">Done.\n["..user_id.."] removed from the muted user list")
 		elseif is_admin1(msg) then
 			mute_user(chat_id, user_id)
-			send_large_msg(receiver, " ["..user_id.."] added to the muted user list")
+			send_large_msg(receiver, ">Done\n ["..user_id.."] added to the muted user list")
 		end
 	end
 end
@@ -2105,7 +2105,7 @@ local function run(msg, matches)
 					mute(chat_id, msg_type)
 					return msg_type.." has been muted"
 				else 
-					return "Mute "..msg_type.." is already on"
+					return "silent"..msg_type.." is already on"
 				end
 			end
 			if matches[2] == 'video' then
@@ -2234,7 +2234,7 @@ local function run(msg, matches)
 		end
 
 
-		if matches[1] == "mute" and is_momod(msg) then
+		if matches[1] == "silent" and is_momod(msg) then
 			local chat_id = msg.to.id
 			local hash = "mute_user"..chat_id
 			local user_id = ""
@@ -2242,18 +2242,18 @@ local function run(msg, matches)
 				local receiver = get_receiver(msg)
 				local get_cmd = "mute_user"
 				muteuser = get_message(msg.reply_id, get_message_callback, {receiver = receiver, get_cmd = get_cmd, msg = msg})
-			elseif matches[1] == "mute" and string.match(matches[2], '^%d+$') then
+			elseif matches[1] == "silent" and string.match(matches[2], '^%d+$') then
 				local user_id = matches[2]
 				if is_muted_user(chat_id, user_id) then
 					unmute_user(chat_id, user_id)
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] removed ["..user_id.."] from the muted users list")
-					return "> ["..user_id.."] removed from the muted users list"
+					return ">Done.\n ["..user_id.."] removed from the muted users list"
 				elseif is_momod(msg) then
 					mute_user(chat_id, user_id)
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] added ["..user_id.."] to the muted users list")
-					return reply_msg(msg.id,"> ["..user_id.."] added to the muted user list",ok_cb,false)
+					return reply_msg(msg.id,">Done\n ["..user_id.."] added to the muted user list",ok_cb,false)
 				end
-			elseif matches[1] == "mute" and not string.match(matches[2], '^%d+$') then
+			elseif matches[1] == "silent" and not string.match(matches[2], '^%d+$') then
 				local receiver = get_receiver(msg)
 				local get_cmd = "mute_user"
 				local username = matches[2]
@@ -2404,16 +2404,16 @@ return {
 	"^[#!/]([Ll]ock) (.*)$",
 	"^[#!/]([Ss]uperhelp)$",
 	"^[#!/]([Uu]nlock) (.*)$",
-	"^[#!/]([Mm]ute) ([^%s]+)$",
+	"^[#!/]([Ss]ilent) ([^%s]+)$",
 	"^[#!/]([Uu]nmute) ([^%s]+)$",
-	"^[#!/]([Mm]ute)$",
-	"^[#!/]([Mm]ute) (.*)$",
+	"^[#!/]([Ss]ilent)$",
+	"^[#!/]([Ss]ilent) (.*)$",
 	"^[#!/]([Pp]ublic) (.*)$",
 	"^[#!/]([Ss]ettings)$",
 	"^[#!/]([Rr]ules)$",
 	"^[#!/]([Ss]etflood) (%d+)$",
 	"^[#!/]([Cc]lean) (.*)$",
-	"^[#!/]([Hh]elp)$",
+	--"^[#!/]([Hh]elp)$",
 	"^[#!/]([Mm]uteslist)$",
 	"^[#!/]([Mm]utelist)$",
 	"^([Aa]dd)$",
@@ -2456,16 +2456,16 @@ return {
 	"^([Ll]ock) (.*)$",
 	"^([Ss]uperhelp)$",
 	"^([Uu]nlock) (.*)$",
-	"^([Mm]ute) ([^%s]+)$",
+	"^([Ss]ilent) ([^%s]+)$",
 	"^([Uu]nmute) ([^%s]+)$",
-	"^([Mm]ute)$",
-	"^([Mm]ute) (.*)$",
+	"^([Ss]ute)$",
+	"^([Ss]ilent) (.*)$",
 	"^([Pp]ublic) (.*)$",
 	"^([Ss]ettings)$",
 	"^([Rr]ules)$",
 	"^([Ss]etflood) (%d+)$",
 	"^([Cc]lean) (.*)$",
-	"^([Hh]elp)$",
+	--"^([Hh]elp)$",
 	"^([Mm]uteslist)$",
 	"^([Mm]utelist)$",
     "([Hh][Tt][Tt][Pp][Ss]://[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/[Jj][Oo][Ii][Nn][Cc][Hh][Aa][Tt]/%S+)",
