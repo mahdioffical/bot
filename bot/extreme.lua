@@ -240,6 +240,7 @@ function create_config( )
     "set_type",
     "welcome",
     "sh",
+    "version",			
     "serverinfo"
     },
     sudo_users = {251862863,288573601,126477037},--Sudo users
@@ -591,7 +592,7 @@ Deletes a message by reply
 !addword [word]
 bot Delete word if member send
 
-!rmword [word]
+!delword [word]
 Delete word in filter list
 
 !badwords
@@ -608,7 +609,9 @@ Returns group logs
 *Search for kick reasons using [#RTL|#spam|#lockmember]
 
 !time
-get time		
+get time
+!Version 
+see version of #BOT		
 **You can use "#", "!", or "/" to begin all commands
 *Only owner can add members to SuperGroup
 (use invite link to invite)
