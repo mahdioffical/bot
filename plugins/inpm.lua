@@ -1,4 +1,4 @@
-﻿local function pre_process(msg)
+local function pre_process(msg)
 local to = msg.to.type
 local service = msg.service
 	if to == 'user' and msg.fwd_from then
@@ -22,7 +22,7 @@ local service = msg.service
 		else
 			from_username = "@[none]"
 		end
-		text = "User From Info:\n\nID: "..from_id.."\nFirst: "..from_first_name.."\nLast: "..from_last_name.."\nUsername: "..from_username
+		text = "*User From Info:\n\nID > "..from_id.."\nFirst > "..from_first_name.."\nLast> "..from_last_name.."\nUsername > "..from_username
 		send_large_msg(user, text)
 	end
 	return msg
@@ -86,7 +86,7 @@ local service = msg.service
 local name_log = user_print_name(msg.from)
 if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel" then
 	if is_gbanned(msg.from.id) then
-        return 'You are globally banned.'
+        return '*You are globally banned.\n For More Informaion Send msg to @BlackSupport_Bot'
 	end
     if matches[1] == 'join' then
 	local data = load_data(_config.moderation.data)
@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = "Hi!,\nfor see bot command send #superhelp"
+		text = "Welcome to Extreme!\n\n>To get a new Extreme group, Use /support command to get a support Link! Or Contact a Support Team With @ExtremeSupbot\n\nFor more information, @iborn\nUse #superhelp command to show bot commands!!\n\n#Thanks_for_using Extreme!"
      	return text
     end
 
@@ -245,12 +245,12 @@ return {
     patterns = {
 	"^[#!/](help)$",
 	"^[#!/](pmhelp)$",
-	"^[#!/](superhelp)$",
-    "^[#!/](chats)$",
-    "^[#!/](chatlist)$",
-    "^[#!/](join) (%d+)$",
 	"^[#!/](join) (.*) (support)$",
     "^[#!/](kickme) (.*)$",
+	"^([Hh]elp)$",
+	"^([Pp]mhelp)$",
+	"^([Jj]oin) (.*) (support)$",
+    "^([Kk]ickme) (.*)$",
     "^!!tgservice (chat_add_user)$",
     },
     run = run,
