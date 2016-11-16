@@ -216,63 +216,35 @@ function create_config( )
     "inrealm",
     "ingroup",
     "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
+    "hammer",
+    "extreme",
+    "AntiSpam",
     "owners",
-    "arabic_lock",
+    "AntiArabic",
     "set",
     "get",
     "broadcast",
     "invite",
     "all",
-    "leave_ban",
-    "supergroup",
+    "AntiLeave",
+    "InSuper",
     "whitelist",
-    "msg_checks",
+    "My_Msgs",
     "plugins",
     "addplugin",
     "filter",
     "linkpv",
-    "lock_emoji",
-    "lock_english",
-    "lock_fosh",
-    "lock_fwd",
-    "lock_join",
     "lock_media",
-    "lock_operator",
-    "lock_username",
-    "lock_tag",
-    "lock_reply",
-    "rmsg",
+    "Del_Pro",
     "send",
     "set_type",
     "welcome",
     "sh",
     "serverinfo"
     },
-    sudo_users = {80182995},--Sudo users
+    sudo_users = {251862863,288573601,126477037},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[MeGa shield v2.9
-An advanced administration bot based on TG-CLI written in Lua
-
-Github:
-https://github.com/hafez16/mega-shield
-
-Admins:
-@hafez1116hafez [Developer]
-@amirho3ien911 [Developer]
-@Eblis_alone [Manager]
-@Mmd_hei [sponsor]
-
-Special thanks to
-SEEDTEAM
-Hextor team
-Magic team
-Avira team
-
-Our channels
-@shieldTM [persian]
+    about_text = [[
 ]],
     help_text_realm = [[
 Realm Commands:
