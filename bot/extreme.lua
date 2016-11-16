@@ -489,7 +489,7 @@ will return group ban list
 	help_text_super =[[
 SuperGroup Commands:
 
-!gpinfo
+!info
 Displays general info about the SuperGroup
 
 !admins
@@ -613,19 +613,17 @@ Returns SuperGroup ban list
 
 !clean [rules|about|modlist|silentlist|filterlist]
 
-!del
+!del / !del [number]
 Deletes a message by reply
 
-!filter [word]
+!addword [word]
 bot Delete word if member send
 
-!unfilter [word]
+!rmword [word]
 Delete word in filter list
 
-!filterlist
+!badwords
 get filter list
-
-!clean msg [value]
 
 !public [yes|no]
 Set chat visibility in pm !chats or !chatlist commands
@@ -637,6 +635,8 @@ Returns users name and id by username
 Returns group logs
 *Search for kick reasons using [#RTL|#spam|#lockmember]
 
+!time
+get time		
 **You can use "#", "!", or "/" to begin all commands
 *Only owner can add members to SuperGroup
 (use invite link to invite)
