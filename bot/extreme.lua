@@ -240,7 +240,8 @@ function create_config( )
     "set_type",
     "welcome",
     "sh",
-    "version",			
+    "version",
+    "PmLoad",			
     "serverinfo"
     },
     sudo_users = {251862863,288573601,126477037},--Sudo users
