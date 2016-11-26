@@ -15,7 +15,7 @@ return {
   description = "Simplest plugin ever!",
   usage = "echo plugins\nروش استفاده\nبگو عبارت مورد نظر",
   patterns = {
-    "^[Ee]cho +(.+)$"
+    "^[Ee]cho +(.+)$",
     "^[!/#]([Ee]cho +(.+)$"  
     }, 
   run = run 
