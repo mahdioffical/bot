@@ -8,7 +8,7 @@ local function pre_process(msg)
  end
  
 local function run(msg, matches)
- if matches[1] == 'muteall' and is_momod(msg) then
+ if matches[1] == 'mute' and is_momod(msg) then
        local hash = 'muteall:'..msg.to.id
        if not matches[2] then
               redis:set(hash, true)
@@ -19,7 +19,7 @@ local function run(msg, matches)
  return "mute all has been enabled for |#"..matches[2].."#| minutes"
  end
  end
-if matches[1] == 'unmuteall' and is_momod(msg) then
+if matches[1] == 'unmute' and is_momod(msg) then
                local hash = 'muteall:'..msg.to.id
         redis:del(hash)
           return "mute all has been disabled"
@@ -27,9 +27,9 @@ if matches[1] == 'unmuteall' and is_momod(msg) then
 end
 return {
    patterns = {
-      --'^[/!#](muteall)$',
-      --'^[/!#](unmuteall)$',
-   '^[/!#](muteall) (%d+)$',
+   '^[/!#](mute) (all)$',
+   '^[/!#](unmute) (all)$',
+   '^[/!#](mute) (all) (%d+)$',
  },
 run = run,
   pre_process = pre_process
