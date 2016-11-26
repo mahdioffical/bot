@@ -777,13 +777,9 @@ end
 			data[tostring(target)]['settings']['lock_fwd'] = 'no'
 		end
 	end
-	if data[tostring(target)]['settings'] then
-		if not data[tostring(target)]['settings']['lock_cmd'] then
-			data[tostring(target)]['settings']['lock_cmd'] = 'no'
-		end
-	end
+
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\n\nLock Links > "..settings.lock_link.."\nLock Webpage > "..settings.lock_webpage.."\nLock Tag > "..settings.lock_tag.."\nLock Emoji > "..settings.lock_emoji.."\nLock English > "..settings.lock_eng.."\nLock Badword > "..settings.lock_badw.."\nLock Flood > "..settings.flood.."\nFlood sensitivity > "..NUM_MSG_MAX.."\nLock Spam > "..settings.lock_spam.."\nLock Contacts > "..settings.lock_contacts.."\nLock Arabic/Persian > "..settings.lock_arabic.."\nLock Member > "..settings.lock_member.."\nLock RTL > "..settings.lock_rtl.."\nLock Forward > "..settings.lock_fwd.."\nLock TGservice > "..settings.lock_tgservice.."\nLock Sticker > "..settings.lock_sticker.."\nPublic > "..settings.public.."\nStrict Settings > "..settings.strict.."\nLock Cmd > "..cmd
+  local text = "SuperGroup settings:\n\nLock Links > "..settings.lock_link.."\nLock Webpage > "..settings.lock_webpage.."\nLock Tag > "..settings.lock_tag.."\nLock Emoji > "..settings.lock_emoji.."\nLock English > "..settings.lock_eng.."\nLock Badword > "..settings.lock_badw.."\nLock Flood > "..settings.flood.."\nFlood sensitivity > "..NUM_MSG_MAX.."\nLock Spam > "..settings.lock_spam.."\nLock Contacts > "..settings.lock_contacts.."\nLock Arabic/Persian > "..settings.lock_arabic.."\nLock Member > "..settings.lock_member.."\nLock RTL > "..settings.lock_rtl.."\nLock Forward > "..settings.lock_fwd.."\nLock TGservice > "..settings.lock_tgservice.."\nLock Sticker > "..settings.lock_sticker.."\nPublic > "..settings.public.."\nStrict Settings > "..settings.strict
   reply_msg(msg.id, text, ok_cb, false)
 end
 
