@@ -1,6 +1,6 @@
-# [MeGa shield](https://telegram.me/AntiSpam_shield)
+# [Extreme](https://telegram.me/Extremerobot)
 
-**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/hafez16/mega-shield/blob/supergroups/LICENSE)**.
+**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/iiborn/M/blob/supergroups/LICENSE)**.
 
 | Command | Description |
 |:--------|:------------|
@@ -12,14 +12,13 @@
 * * *
 
 ## Commands
-MeGa-shield has several commands that are only usable at certain ranks.
+Extreme has several commands that are only usable at certain ranks.
 
 
 ## General Commands
 | Command | Description |
 |:--------|:------------|
 | [#!/]id | Returns group/SuperGroup ID or user id in pm. |
-| [#!/]shield| Returns bot information. |
 
 
 ## Private Message Commands
@@ -221,8 +220,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/hafez16/mega-shield.git
-cd mega-shield
+git clone https://github.com/iiborn/M.git -b supergroups
+cd M
 chmod +x launch.sh
 ./launch.sh install
 ./launch.sh # Enter a phone number & confirmation code.
@@ -270,7 +269,6 @@ Create a realm using the `!createrealm` command.
 
 Check out this [tutorial by Telegram Geeks](http://telegramgeeks.com/2016/01/teleseed-tutorial/) for further assistance with setup and installation.
 
-[hafez (developer)](https://telegram.me/hafez1116hafez)
-[amir hosein (developer)](https://telegram.me/amirho3ien911)
-[mostafa (manager)](https://telegram.me/Eblis_alone)
-[mohammad (sponsor)](https://telegram.me/Mmd_hei)
+[#MasiH (developer)](https://telegram.me/iborn)
+[MR_PU (manager)](https://telegram.me/MR_PU)
+
