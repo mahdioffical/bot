@@ -3,9 +3,9 @@ local function history(extra, suc, result)
     delete_msg(result[i].id, ok_cb, false)
   end
   if tonumber(extra.con) == #result then
-    send_msg(extra.chatid, '"'..#result..'" #Done. ', ok_cb, false)
+    send_msg(extra.chatid, '"'..#result..'" #Cleaned. ', ok_cb, false)
   else
-    send_msg(extra.chatid, '"'..#result..'" #Done. ', ok_cb, false)
+    send_msg(extra.chatid, '"'..#result..'" #Cleaned. ', ok_cb, false)
   end
 end
 local function run(msg, matches)
