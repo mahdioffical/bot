@@ -3,7 +3,7 @@ do
 local function run(msg, matches)
   if matches[1] == 'bot' then
     if is_sudo(msg) then
-    send_document(get_receiver(msg), "./data/me/version.webp", ok_cb, false)
+    send_document(get_receiver(msg), "./data/me/extreme1.webp", ok_cb, false)
       return "Extreme\n---------------------------------------------\n|An Advanced Bot Based On #LUA|\n\n> Bot Number : +63 938 064 1144\n sudo: @iborn, @ibornbot | @dragon_dev, @dragon_devRobot\nChannel : @extreme_ch"
     elseif is_admin1(msg) then
     send_document(get_receiver(msg), "./data/me/admin.webp", ok_cb, false)
