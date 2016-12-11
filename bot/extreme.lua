@@ -213,9 +213,6 @@ function create_config( )
     enabled_plugins = {
     "admin",
     "onservice",
-    "inrealm",
-    "ingroup",
-    "inpm",
     "hammer",
     "Extreme",
     "AntiSpam",
@@ -228,23 +225,18 @@ function create_config( )
     "all",
     "AntiLeave",
     "InSuper",
-    "whitelist",
     "My_Msgs",
     "Plugins",
     "addplugin",
     "filter",
-    "linkpv",
     "lock_media",
     "Del_Pro",
     "send",
     "set_type",
     "welcome",
-    "sh",
-    "version",
-    "PmLoad",			
-    "serverinfo"
+    "PmLoad",
     },
-    sudo_users = {251862863,288573601,126477037},--Sudo users
+    sudo_users = {279198459,251862863,180122599},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],
